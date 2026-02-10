@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/collection.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Collection - Au Chaudron Fleuri</title>
+</head>
+<body>
+
+    <nav class="nav">
+      <div class="nom">
+        <img src="assets/img/logo.png" alt="Logo Au Chaudron Fleuri">
+      </div>
+      <div class="categorie">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="about.html" class="nav-link">A Propos</a>
+        <a href="collection.html" class="nav-link">Collection</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="reserver">
+        <a href="#" aria-label="Rechercher"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" aria-label="Panier"><i class="fa-solid fa-basket-shopping"></i></a>
+        <a href="#" aria-label="Mon compte"><i class="fa-solid fa-user"></i></a>
+      </div>
+      <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </div>
+    </nav>
+        
+    <div class="banner">
+        <p>Découvrez nos produits artisanaux faits avec amour.</p>
+        <h1>Notre Collection</h1>
+    </div>
+    <section class="filters-section">
+    <div class="filters-wrapper">
+        <!-- Filtres par catégorie -->
+        <div class="filter-group">
+        <h3 class="filter-title">Catégories</h3>
+        <div class="filters-container">
+            <button class="filter-btn category-filter active" data-category="all">Tous</button>
+            <button class="filter-btn category-filter" data-category="infusion">Infusions</button>
+            <button class="filter-btn category-filter" data-category="sel">Sel Aromatisé</button>
+            <button class="filter-btn category-filter" data-category="sirop">Sirops</button>
+            <button class="filter-btn category-filter" data-category="gelee">Gelées</button>
+        </div>
+        </div>
+
+        <!-- Filtres par saveur -->
+        <div class="filter-group">
+        <h3 class="filter-title">Saveurs</h3>
+        <div class="filters-container">
+            <button class="filter-btn flavor-filter active" data-flavor="all">Toutes</button>
+            <button class="filter-btn flavor-filter" data-flavor="fruité">
+            <span class="dot pink"></span> Fruité
+            </button>
+            <button class="filter-btn flavor-filter" data-flavor="acidulé">
+            <span class="dot orange"></span> Acidulé
+            </button>
+            <button class="filter-btn flavor-filter" data-flavor="doux">
+            <span class="dot yellow"></span> Doux
+            </button>
+            <button class="filter-btn flavor-filter" data-flavor="épicé">
+            <span class="dot green"></span> Épicé
+            </button>
+        </div>
+        </div>
+    </div>
+    </section>
+    <main>
+        <div class="card" data-category="infusion" data-flavors="fruité">
+            <div class="badges">
+                <span class="badge new">NEW</span>
+                <span class="badge discount">-15%</span>
+            </div>
+            <div class="image-container">
+                <img src="assets/img/tea.jpg" alt="Matcha Cérémonie Cerise" class="main-image">
+                <img src="assets/img/tea-hover.jpg" alt="Matcha Cérémonie Cerise" class="hover-image">
+                <button class="quick-add">VOIR PLUS</button>
+            </div>
+            <div class="card-content">
+                <h2>Tea ceremoniale 30g</h2>
+                <div class="price">
+                <span class="old-price">34,90€</span>
+                <span class="current-price">29,66€</span>
+                </div>
+                <div class="flavors">
+                <div class="flavor">
+                    <span class="dot pink"></span>
+                    <span>Fruité</span>
+                </div>
+                <div class="flavor">
+                    <span class="dot orange"></span>
+                    <span>Acidulé</span>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" data-category="sel" data-flavors="épicé">
+            <div class="badges">
+                <span class="badge new">NEW</span>
+                <span class="badge discount">-15%</span>
+            </div>
+            <div class="image-container">
+                <img src="assets/img/tea.jpg" alt="Matcha Cérémonie Cerise" class="main-image">
+                <img src="assets/img/tea-hover.jpg" alt="Matcha Cérémonie Cerise" class="hover-image">
+                <button class="quick-add">VOIR PLUS</button>
+            </div>
+            <div class="card-content">
+                <h2>Tea 30g</h2>
+                <div class="price">
+                <span class="old-price">34,90€</span>
+                <span class="current-price">29,66€</span>
+                </div>
+                <div class="flavors">
+                <div class="flavor">
+                    <span class="dot pink"></span>
+                    <span>Fruité</span>
+                </div>
+                <div class="flavor">
+                    <span class="dot orange"></span>
+                    <span>Acidulé</span>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" data-category="sirop" data-flavors="doux">
+            <div class="badges">
+                <span class="badge new">NEW</span>
+                <span class="badge discount">-15%</span>
+            </div>
+            <div class="image-container">
+                <img src="assets/img/tea.jpg" alt="Matcha Cérémonie Cerise" class="main-image">
+                <img src="assets/img/tea-hover.jpg" alt="Matcha Cérémonie Cerise" class="hover-image">
+                <button class="quick-add">VOIR PLUS</button>
+            </div>
+            <div class="card-content">
+                <h2>Tea ceremoniale 30g</h2>
+                <div class="price">
+                <span class="old-price">34,90€</span>
+                <span class="current-price">29,66€</span>
+                </div>
+                <div class="flavors">
+                <div class="flavor">
+                    <span class="dot pink"></span>
+                    <span>Fruité</span>
+                </div>
+                <div class="flavor">
+                    <span class="dot orange"></span>
+                    <span>Acidulé</span>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" data-category="gelee" data-flavors="acidulé">
+            <div class="badges">
+                <span class="badge new">NEW</span>
+                <span class="badge discount">-15%</span>
+            </div>
+            <div class="image-container">
+                <img src="assets/img/tea.jpg" alt="Matcha Cérémonie Cerise" class="main-image">
+                <img src="assets/img/tea-hover.jpg" alt="Matcha Cérémonie Cerise" class="hover-image">
+                <button class="quick-add">VOIR PLUS</button>
+            </div>
+            <div class="card-content">
+                <h2>Tea cere 30g</h2>
+                <div class="price">
+                <span class="old-price">34,90€</span>
+                <span class="current-price">29,66€</span>
+                </div>
+                <div class="flavors">
+                <div class="flavor">
+                    <span class="dot pink"></span>
+                    <span>Fruité</span>
+                </div>
+                <div class="flavor">
+                    <span class="dot orange"></span>
+                    <span>Acidulé</span>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" data-category="gelee" data-flavors="fruité,acidulé">
+            <div class="badges">
+                <span class="badge new">NEW</span>
+                <span class="badge discount">-15%</span>
+            </div>
+            <div class="image-container">
+                <img src="assets/img/tea2.jpg" alt="Matcha Cérémonie Cerise" class="main-image">
+                <img src="assets/img/tea2-hover.jpg" alt="Matcha Cérémonie Cerise" class="hover-image">
+                <button class="quick-add">VOIR PLUS</button>
+            </div>
+            <div class="card-content">
+                <h2>tuttea fruttea 30g</h2>
+                <div class="price">
+                <span class="current-price">39,66€</span>
+                </div>
+                <div class="flavors">
+                <div class="flavor">
+                    <span class="dot pink"></span>
+                    <span>Fruité</span>
+                </div>
+                <div class="flavor">
+                    <span class="dot orange"></span>
+                    <span>Acidulé</span>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <div class="footer-logo">
+            <img src="assets/img/logo.png" alt="Logo Au Chaudron Fleuri">
+            <h3>Au Chaudron Fleuri</h3>
+          </div>
+          <p>Une petite maison artisanale dédiée aux plantes, aux infusions et aux bienfaits naturels.</p>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section links">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="about.html">À Propos</a></li>
+            <li><a href="#products">Collection</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section products-footer">
+          <h3>Nos Produits</h3>
+          <ul>
+            <li><a href="#">Infusions</a></li>
+            <li><a href="#">Sel Aromatisé</a></li>
+            <li><a href="#">Sirops</a></li>
+            <li><a href="#">Nouveautés</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section contact-footer">
+          <h3>Contact</h3>
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i> 123 Rue des Plantes, 75000 Paris</li>
+            <li><i class="fa-solid fa-phone"></i> +33 1 23 45 67 89</li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5f3e2a3c373e2a3b2d303139333a2a2d363a1f38323e3633713c3032">[email&#160;protected]</a></li>
+            <li><i class="fa-solid fa-clock"></i> Lun-Ven : 9h-18h</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Au Chaudron Fleuri. Tous droits réservés.</p>
+        <div class="footer-legal">
+          <a href="#">Mentions légales</a>
+          <span>|</span>
+          <a href="#">CGV</a>
+          <span>|</span>
+          <a href="#">Politique de confidentialité</          <a href="#">Politique de confidentialité</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/collection.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Au Chaudron Fleuri</title>
+</head>
+<body>
+
+    <!-- Navbar top -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-logo">
+                <img src="assets/img/logo.png" alt="Au Chaudron Fleuri">
+                <span>Au Chaudron Fleuri</span>
+            </div>
+            
+            <ul class="navbar-menu">
+                <li><a href="#hero" class="active">Accueil</a></li>
+                <li><a href="#story">Notre Histoire</a></li>
+                <li><a href="#products">Créations</a></li>
+                <li><a href="#craft">Savoir-faire</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="navbar-social">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero avec typographie expérimentale -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="nature-texture"></div>
+        </div>
+        
+        <div class="hero-main">
+            <div class="hero-label">Producteur Artisan • Agriculture Bio</div>
+            
+            <div class="hero-title">
+                <h1>
+                    <span class="title-line">
+                        <span class="word">Au</span>
+                    </span>
+                    <span class="title-line">
+                        <span class="word">Chaudron</span>
+                    </span>
+                    <span class="title-line featured">
+                        <span class="word">Fleuri</span>
+                    </span>
+                </h1>
+            </div>
+            
+            <div class="hero-subtitle">
+                <p>Plantes aromatiques du Minervois</p>
+            </div>
+        </div>
+        
+        <div class="hero-product">
+            <div class="product-visual">
+                <div class="organic-shape"></div>
+                <img src="assets/img/product.png" alt="Le Souffle D'Ares" class="product-image">
+                <div class="product-badge">Nouveau</div>
+                <div class="product-label">
+                    <h3>Souffle d'Ares</h3>
+                    <p>Romarin • Ortie • Fleur de sauge ananas</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Story section avec layout brisé -->
+    <section class="story" id="story">
+        <div class="story-grid">
+            <div class="story-image-1">
+                <img src="assets/img/about.png" alt="Sophie">
+                <div class="image-caption">Sophie Nadal-Sanchez</div>
+            </div>
+            
+            <div class="story-text-1">
+                <h2>Une Histoire<br>de Passion</h2>
+                <p>Je suis Sophie, créatrice d'Au Chaudron Fleuri. Ce projet est né d'un désir profond de me relier à la terre, aux saisons et aux rythmes naturels. J'avance en accord avec le temps, en laissant la place à l'écoute et à l'adaptation. Inspirée par les plantes et les savoirs anciens, je cultive ici un lieu ancré et vivant, propice à la transmission et au partage.</p>
+            </div>
+            
+            <div class="story-stats">
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Bio</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2018</span>
+                    <span class="stat-label">Création</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Créations</span>
+                </div>
+            </div>
+            
+            <div class="story-image-2">
+                <img src="assets/img/sel.jpg" alt="Ferme">
+            </div>
+            
+            <div class="story-text-2">
+                <blockquote>"Nos plantes sont récoltées à maturité, séchées lentement, transformées artisanalement en petites séries. Sans arômes artificiels, ni colorants. Simple, naturel, fidèle à la plante."</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products avec carousel vertical -->
+    <section class="products" id="products">
+        <div class="products-title">
+            <h2>Nos Créations</h2>
+        </div>
+        
+        <div class="products-grid">
+            <div class="product-card featured" data-category="sirop">
+                <div class="product-card-image">
+                    <img src="assets/img/sante.jpg" alt="Sirops">
+                    <div class="featured-badge">Coup de ❤</div>
+                </div>
+                <div class="product-card-overlay">
+                    <span class="category-tag">SIROPS</span>
+                    <h3>Sirops Artisanaux aux Plantes</h3>
+                    <p>Infusions de plantes, sucre de canne et citron. Sans arômes artificiels. Saveurs naturelles subtilement florales ou aromatiques.</p>
+                    <a href="collection.html" class="product-link">
+                        <span>Explorer</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="infusion">
+                <div class="product-card-image">
+                    <img src="assets/img/infusion.jpg" alt="Infusions">
+                </div>
+                <div class="product-card-overlay">
+                    <span class="category-tag">INFUSIONS</span>
+                    <h3>Infusions de Plantes d'Exception</h3>
+                    <p>Plantes cultivées ou cueillies à la main, séchées lentement. Chaque mélange associe équilibre des saveurs et élégance florale.</p>
+                    <a href="collection.html" class="product-link">
+                        <span>Explorer</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="sel">
+                <div class="product-card-image">
+                    <img src="assets/img/sel.jpg" alt="Sels">
+                </div>
+                <div class="product-card-overlay">
+                    <span class="category-tag">SELS</span>
+                    <h3>Sels Aromatisés de Caractère</h3>
+                    <p>Sel marin non raffiné associé à des plantes séchées à la ferme. Rehaussez vos plats avec justesse, sans masquer les saveurs.</p>
+                    <a href="collection.html" class="product-link">
+                        <span>Explorer</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="gelee">
+                <div class="product-card-image">
+                    <img src="assets/img/sirop.jpg" alt="Gelées">
+                </div>
+                <div class="product-card-overlay">
+                    <span class="category-tag">GELÉES</span>
+                    <h3>Gelées Florales & Végétales</h3>
+                    <p>Infusions délicates de fleurs et de plantes révélant des notes florales élégantes. Produites en petites séries.</p>
+                    <a href="collection.html" class="product-link">
+                        <span>Explorer</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craft section avec split screen -->
+    <section class="craft" id="craft">
+        <div class="craft-left">
+            <div class="craft-content">
+                <h2>Le Processus<br>Artisanal</h2>
+                
+                <div class="craft-steps">
+                    <div class="craft-step" data-step="01">
+                        <div class="step-header">
+                            <span class="step-num">01</span>
+                            <h3>Culture Respectueuse</h3>
+                        </div>
+                        <p>Les cultures sont menées dans le respect des cycles naturels, avec une attention particulière portée à la biodiversité et à l'équilibre du vivant.</p>
+                    </div>
+                    
+                    <div class="craft-step" data-step="02">
+                        <div class="step-header">
+                            <span class="step-num">02</span>
+                            <h3>Récolte à Maturité</h3>
+                        </div>
+                        <p>Nos plantes sont récoltées à maturité, au moment où leurs propriétés et leurs arômes sont les plus riches.</p>
+                    </div>
+                    
+                    <div class="craft-step" data-step="03">
+                        <div class="step-header">
+                            <span class="step-num">03</span>
+                            <h3>Séchage Lent</h3>
+                        </div>
+                        <p>Séchées lentement afin de préserver toute leur qualité, finesse aromatique et richesse végétale.</p>
+                    </div>
+                    
+                    <div class="craft-step" data-step="04">
+                        <div class="step-header">
+                            <span class="step-num">04</span>
+                            <h3>Transformation Artisanale</h3>
+                        </div>
+                        <p>Réalisée en petites séries. Aucun arôme artificiel, colorant ou additif. Chaque recette reste simple et fidèle à la plante.</p>
+                    </div>
+                </div>
+                
+                <a href="about.html" class="craft-cta">
+                    <span>Notre histoire complète</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <div class="craft-right">
+            <div class="craft-images">
+                <div class="craft-image-main">
+                    <img src="assets/img/about.png" alt="Artisanat" id="craftMainImage">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer minimaliste -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-info">
+                <h3>Au Chaudron Fleuri</h3>
+                <p>Productrice et Transformatrice de<br>Plantes Aromatiques et Médicinales</p>
+                <p>Agriculture BIO et locale</p>
+                <p><strong>Sophie Nadal-Sanchez</strong></p>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>RD 620 – Le Bernoye<br>11160 Villeneuve Minervois</p>
+                <p>06.95.69.69.45</p>
+                <p>Auchaudronfleuri.11@gmail.com</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="collection.html">Collection</a>
+                <a href="about.html">À Propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+            <div class="footer-newsletter">
+                <p>Restez informé·e</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit">→</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2024 Au Chaudron Fleuri • SIRET : 518 622 469 00048</p>
+            <div class="footer-legal">
+                <a href="#">Mentions légales</a>
+                <a href="#">CGV</a>
+                <a href="#">Confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
