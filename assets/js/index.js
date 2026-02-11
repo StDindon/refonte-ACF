@@ -117,27 +117,6 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.story-grid > *, .product-card, .craft-step').forEach(el => {
     observer.observe(el);
 });
-
-// Parallax subtil sur le hero product
-let ticking = false;
-
-window.addEventListener('scroll', () => {
-    if (!ticking) {
-        window.requestAnimationFrame(() => {
-            const scrolled = window.pageYOffset;
-            const heroProduct = document.querySelector('.hero-product');
-            
-            if (heroProduct && scrolled < window.innerHeight) {
-                heroProduct.style.transform = `translateY(${scrolled * 0.15}px)`;
-            }
-            
-            ticking = false;
-        });
-        
-        ticking = true;
-    }
-});
-
 // Newsletter form
 const newsletterForm = document.querySelector('.newsletter-form');
 if (newsletterForm) {

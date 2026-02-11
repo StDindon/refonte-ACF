@@ -9,172 +9,235 @@
 </head>
 <body>
 
-    <nav class="nav">
-        <div class="nom">
-            <img src="assets/img/logo.png" alt="Logo Au Chaudron Fleuri">
-        </div>
-        <div class="categorie">
-            <a href="index.html" class="nav-link">Accueil</a>
-            <a href="about.html" class="nav-link">A Propos</a>
-            <a href="collection.html" class="nav-link">Collection</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-        </div>
-        <div class="reserver">
-            <a href="#" aria-label="Rechercher"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="#" aria-label="Panier"><i class="fa-solid fa-basket-shopping"></i></a>
-            <a href="#" aria-label="Mon compte"><i class="fa-solid fa-user"></i></a>
-        </div>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-logo">
+                <img src="assets/img/logo.png" alt="Au Chaudron Fleuri">
+                <span>Au Chaudron Fleuri</span>
+            </div>
+            
+            <ul class="navbar-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html" class="active">Notre Histoire</a></li>
+                <li><a href="collection.html">Créations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="navbar-social">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
+    <!-- Hero About -->
     <section class="hero-about">
-        <h1>À Propos</h1>
-        <p>Découvrez notre histoire et nos valeurs</p>
+        <div class="hero-content">
+            <span class="hero-label">Notre Histoire</span>
+            <h1>Née de la Terre,<br>Guidée par les Cycles</h1>
+            <p>Une agriculture vivante, accessible et ancrée dans son territoire</p>
+        </div>
+        <div class="hero-image">
+            <img src="assets/img/about.png" alt="Sophie Nadal-Sanchez">
+        </div>
     </section>
 
-    <section class="qui">
-        <div class="left">
-            <img src="assets/img/about.png" alt="Sophie Nadal-Sanchez"/>
-        </div>
-        <div class="right">
-            <h2 class="big_title">À Propos de Sophie</h2>
-            <p class="presentation">
-                Sophie Nadal-Sanchez est productrice et transformatrice de plantes aromatiques et médicinales bio à Villeneuve Minervois, dans l'Aude. Passionnée par les plantes depuis toujours, elle cultive et transforme avec soin des produits naturels et authentiques.
-            </p>
-            <div class="certification-badge">
-                <p>Certifiée Agriculture Biologique</p>
-                <p>FR-BIO-01</p>
+    <!-- Sophie Section -->
+    <section class="sophie-section">
+        <div class="sophie-grid">
+            <div class="sophie-image">
+                <img src="assets/img/peau.jpg" alt="Sophie">
+            </div>
+            
+            <div class="sophie-text">
+                <h2>À Propos de Moi</h2>
+                <p>Je suis Sophie, créatrice d'Au Chaudron Fleuri.</p>
+                
+                <p>Ce projet est né d'un désir profond de me relier à la terre, aux saisons et aux rythmes naturels, en choisissant une manière de vivre et de travailler plus douce et respectueuse du vivant.</p>
+                
+                <p>J'avance en accord avec le temps, en acceptant de ralentir et de composer avec les cycles, ceux de la nature comme ceux du corps. Chaque geste est pensé avec attention, sans forcer, en laissant la place à l'écoute et à l'adaptation.</p>
+                
+                <p>Inspirée par les plantes, les savoirs anciens et la magie discrète du quotidien, je cultive ici un lieu ancré et vivant, propice à la transmission, au partage et à la reconnexion à l'essentiel.</p>
             </div>
         </div>
     </section>
 
-    <section class="qui reverse">
-        <div class="left">
-            <img src="assets/img/ferme.jpg" alt="La Ferme"/>
-        </div>
-        <div class="right">
-            <h2 class="big_title">À Propos de la Ferme</h2>
-            <p class="presentation">
-                Située sur la RD 620 au lieu-dit Le Bernoye, notre ferme est un havre de paix où chaque plante est cultivée avec amour et respect de l'environnement. Notre terroir unique du Minervois confère à nos plantes des qualités aromatiques exceptionnelles.
-            </p>
-            <div class="location-box">
-                <h3>Notre Adresse</h3>
-                <p>RD 620 – Le Bernoye<br>
-                11160 Villeneuve Minervois<br>
-                Occitanie, France</p>
+    <!-- Ferme Section -->
+    <section class="ferme-section">
+        <div class="ferme-content">
+            <div class="ferme-text">
+                <h2>À Propos de la Ferme</h2>
+                
+                <div class="ferme-block">
+                    <h3>Un Écosystème Vivant</h3>
+                    <p>La ferme a été pensée comme un écosystème à part entière. Les cultures y sont menées dans le respect des cycles naturels, avec une attention particulière portée à la biodiversité, aux sols et à l'équilibre du vivant.</p>
+                </div>
+                
+                <div class="ferme-block">
+                    <h3>Autonomie & Durabilité</h3>
+                    <p>Je développe une approche orientée vers l'autonomie : production locale, gestion raisonnée de l'eau, énergie solaire, compostage et valorisation des ressources disponibles sur place. Chaque aménagement est pensé pour être simple, fonctionnel et durable.</p>
+                </div>
+                
+                <div class="ferme-block">
+                    <h3>Transmission & Partage</h3>
+                    <p>Au Chaudron Fleuri est également un lieu ouvert, dédié à la transmission, à l'accueil et aux rencontres.</p>
+                </div>
+            </div>
+            
+            <div class="ferme-images">
+                <div class="image-grid">
+                    <img src="assets/img/sel.jpg" alt="Ferme">
+                    <img src="assets/img/infusion.jpg" alt="Culture">
+                    <img src="assets/img/sirop.jpg" alt="Récolte">
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="notre-demarche">
-        <h2 class="section-title">Notre Démarche</h2>
-        <p class="section-subtitle">Une production respectueuse de la nature et des traditions</p>
+    <!-- Démarche Section -->
+    <section class="demarche-section">
+        <div class="demarche-header">
+            <h2>Notre Démarche</h2>
+            <p>Une approche artisanale et respectueuse du vivant</p>
+        </div>
         
-        <div class="demarche-content">
-            <div class="plus_infos">
-                <div class="plus_info">
-                    <div class="top">
-                        <h3>Agriculture Biologique</h3>
-                        <i class="fa-solid fa-caret-down"></i>
-                    </div>
-                    <p>
-                        <span class="accroche">Nos plantes sont cultivées selon les principes de l'agriculture biologique.</span><br><br>
-                        Sans pesticides ni engrais chimiques, nous respectons les cycles naturels et la biodiversité. Notre certification AB garantit la qualité et la traçabilité de tous nos produits.
-                    </p>
+        <div class="demarche-grid">
+            <div class="demarche-card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-leaf"></i>
                 </div>
-
-                <div class="plus_info">
-                    <div class="top">
-                        <h3>Transformation Artisanale</h3>
-                        <i class="fa-solid fa-caret-down"></i>
-                    </div>
-                    <p>
-                        <span class="accroche">Chaque produit est transformé à la ferme dans notre atelier artisanal.</span><br><br>
-                        Du séchage des plantes à la mise en sachet, chaque étape est réalisée avec soin pour préserver les arômes et les bienfaits de nos plantes. Nos infusions, sels aromatisés, sirops et gelées sont le fruit d'un savoir-faire traditionnel.
-                    </p>
+                <h3>Agriculture Bio</h3>
+                <p>Nos plantes sont issues de la ferme ou de cueillette sauvage raisonnée. Culture biologique certifiée dans le respect des cycles naturels.</p>
+            </div>
+            
+            <div class="demarche-card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-seedling"></i>
                 </div>
+                <h3>Récolte à Maturité</h3>
+                <p>Récoltées au moment où leurs propriétés et leurs arômes sont les plus riches, puis séchées lentement pour préserver toute leur qualité.</p>
+            </div>
+            
+            <div class="demarche-card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-hands-holding-circle"></i>
+                </div>
+                <h3>Transformation Artisanale</h3>
+                <p>Réalisée en petites séries. Chaque recette est pensée pour rester simple, lisible et fidèle à la plante. Sans arômes artificiels, ni colorants, ni additifs inutiles.</p>
+            </div>
+            
+            <div class="demarche-card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <h3>Engagement Qualité</h3>
+                <p>Une agriculture respectueuse de l'environnement, une démarche biologique certifiée, et une attention constante portée à la traçabilité et à la qualité.</p>
+            </div>
+        </div>
+    </section>
 
-                <div class="plus_info">
-                    <div class="top">
-                        <h3>Production Saisonnière</h3>
-                        <i class="fa-solid fa-caret-down"></i>
+    <!-- Valeurs Section -->
+    <section class="valeurs-section">
+        <div class="valeurs-content">
+            <h2>Nos Engagements</h2>
+            
+            <div class="valeurs-list">
+                <div class="valeur-item">
+                    <span class="valeur-number">01</span>
+                    <div class="valeur-text">
+                        <h3>Production Respectueuse</h3>
+                        <p>Nous croyons en une production respectueuse de l'environnement, humaine et transparente.</p>
                     </div>
-                    <p>
-                        <span class="accroche">Nous respectons le rythme des saisons et de la nature.</span><br><br>
-                        Chaque plante est récoltée au moment optimal de sa maturité, garantissant ainsi une qualité aromatique exceptionnelle. Notre production varie au fil de l'année, vous offrant toujours des produits frais et de saison.
-                    </p>
+                </div>
+                
+                <div class="valeur-item">
+                    <span class="valeur-number">02</span>
+                    <div class="valeur-text">
+                        <h3>Agriculture Vivante</h3>
+                        <p>Une vision d'une agriculture vivante, accessible et ancrée dans son territoire.</p>
+                    </div>
+                </div>
+                
+                <div class="valeur-item">
+                    <span class="valeur-number">03</span>
+                    <div class="valeur-text">
+                        <h3>Petites Séries</h3>
+                        <p>Les volumes sont volontairement limités, afin de privilégier la justesse du geste plutôt que la quantité.</p>
+                    </div>
+                </div>
+                
+                <div class="valeur-item">
+                    <span class="valeur-number">04</span>
+                    <div class="valeur-text">
+                        <h3>Créations Vivantes</h3>
+                        <p>Nos créations évoluent au fil des saisons, des récoltes et des cueillettes. Chaque produit est le reflet d'un moment de l'année, d'un lieu et d'un savoir-faire vivant.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CTA Section -->
     <section class="cta-section">
-        <h2>Découvrez Nos Produits</h2>
-        <p>Explorez notre collection d'infusions, sels aromatisés,<br>sirops et gelées artisanaux</p>
-        <a href="collection.html" class="btn">Voir la Collection</a>
+        <div class="cta-content">
+            <h2>Découvrez Nos Créations</h2>
+            <p>Explorez notre collection d'infusions, sels, sirops et gelées artisanales</p>
+            <a href="collection.html" class="btn-primary">
+                <span>Voir la Collection</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section about">
-                <div class="footer-logo">
-                    <img src="assets/img/logo.png" alt="Logo Au Chaudron Fleuri">
-                    <h3>Au Chaudron Fleuri</h3>
-                </div>
-                <p>Productrice et transformatrice de plantes aromatiques et médicinales. Agriculture BIO et locale.</p>
-                <div class="socials">
-                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
-                </div>
+        <div class="footer-main">
+            <div class="footer-info">
+                <h3>Au Chaudron Fleuri</h3>
+                <p>Productrice et Transformatrice de<br>Plantes Aromatiques et Médicinales</p>
+                <p>Agriculture BIO et locale</p>
+                <p><strong>Sophie Nadal-Sanchez</strong></p>
             </div>
-
-            <div class="footer-section links">
-                <h3>Navigation</h3>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À Propos</a></li>
-                    <li><a href="collection.html">Collection</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>RD 620 – Le Bernoye<br>11160 Villeneuve Minervois</p>
+                <p>06.95.69.69.45</p>
+                <p>Auchaudronfleuri.11@gmail.com</p>
             </div>
-
-            <div class="footer-section products-footer">
-                <h3>Nos Produits</h3>
-                <ul>
-                    <li><a href="collection.html">Infusions</a></li>
-                    <li><a href="collection.html">Sels Aromatisés</a></li>
-                    <li><a href="collection.html">Sirops</a></li>
-                    <li><a href="collection.html">Gelées</a></li>
-                </ul>
+            
+            <div class="footer-links">
+                <a href="collection.html">Collection</a>
+                <a href="about.html">À Propos</a>
+                <a href="contact.html">Contact</a>
             </div>
-
-            <div class="footer-section contact-footer">
-                <h3>Contact</h3>
-                <ul>
-                    <li><i class="fa-solid fa-location-dot"></i> RD 620 – Le Bernoye, 11160 Villeneuve Minervois</li>
-                    <li><i class="fa-solid fa-phone"></i> 06.95.69.69.45</li>
-                    <li><i class="fa-solid fa-envelope"></i> Auchaudronfleuri.11@gmail.com</li>
-                </ul>
+            
+            <div class="footer-newsletter">
+                <p>Restez informé·e</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit">→</button>
+                </form>
             </div>
         </div>
-
+        
         <div class="footer-bottom">
-            <p>&copy; 2024 Au Chaudron Fleuri. Tous droits réservés.</p>
+            <p>© 2024 Au Chaudron Fleuri • SIRET : 518 622 469 00048</p>
             <div class="footer-legal">
                 <a href="#">Mentions légales</a>
-                <span>|</span>
                 <a href="#">CGV</a>
-                <span>|</span>
-                <a href="#">Politique de confidentialité</a>
+                <a href="#">Confidentialité</a>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/about.js"></script>
 </body>
 </html>
