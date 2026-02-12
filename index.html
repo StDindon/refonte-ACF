@@ -14,28 +14,34 @@
         <div class="navbar-content">
             <div class="navbar-logo">
                 <img src="assets/img/logo.png" alt="Au Chaudron Fleuri">
-                <span>Au Chaudron Fleuri</span>
+                <span class="logo-text">Au Chaudron Fleuri</span>
             </div>
             
             <ul class="navbar-menu">
-                <li><a href="#hero" class="active">Accueil</a></li>
+                <li><a href="index.html" class="active">Accueil</a></li>
                 <li><a href="about.html">Notre Histoire</a></li>
-                <li><a href="#products">Créations</a></li>
-                <li><a href="#craft">Savoir-faire</a></li>
+                <li><a href="collection.html">Créations</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             
-            <div class="navbar-social">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            </div>
-            
+            <div class="navbar-icons">
+                <a href="#" class="cart-icon" id="cartIcon">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <div class="navbar-social">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                
             <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
+            </div>
+            
     </nav>
 
     <!-- Hero avec typographie expérimentale -->
@@ -94,7 +100,7 @@
             
             <div class="story-text-1">
                 <h2>Une Histoire<br>de Passion</h2>
-                <p>Je suis Sophie, créatrice d'Au Chaudron Fleuri. Ce projet est né d'un désir profond de me relier à la terre, aux saisons et aux rythmes naturels. J'avance en accord avec le temps, en laissant la place à l'écoute et à l'adaptation. Inspirée par les plantes et les savoirs anciens, je cultive ici un lieu ancré et vivant, propice à la transmission et au partage.</p>
+                <p>Je suis Sophie, créatrice d'Au Chaudron Fleuri. Ce projet est né d'un désir profond de me relier à la terre, aux saisons et aux rythmes naturels. J'avance en accord avec le temps, en laissant la place à l'écoute et à l'adaptation. Inspirée par les plantes et les savoirs anciens, je cultive ici un lieu ancré et vivant.</p>
             </div>
             
             <div class="story-stats">
@@ -257,6 +263,35 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal Panier -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-overlay" id="cartOverlay"></div>
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h2><i class="fa-solid fa-basket-shopping"></i> Votre Panier</h2>
+                <button class="cart-close" id="cartClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="cart-body" id="cartBody">
+                <p class="cart-empty">Votre panier est vide</p>
+            </div>
+            
+            <div class="cart-footer" id="cartFooter" style="display: none;">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span class="total-price" id="totalPrice">0.00€</span>
+                </div>
+                <a href="collection.html" class="btn-checkout" id="checkoutBtn">
+                    <span>Voir la Collection</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <p class="checkout-info">Ajoutez des produits depuis notre collection</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer minimaliste -->
     <footer class="footer">

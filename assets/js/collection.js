@@ -1,271 +1,544 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Données des produits
-  const produits = [
-    {
-      id: 1,
-      name: "Tea Ceremoniale Cerise",
-      prix: "29.66",
-      prixBarré: "34.90",
-      category: "infusion",
-      flavors: ["fruité", "acidulé"],
-      image: "../public/assets/img/tea.jpg",
-      imageHover: "../public/assets/img/tea-hover.jpg",
-      badges: ["NEW", "-15%"],
-      description: "Une infusion délicate aux notes fruitées et acidulées"
-    },
-    {
-      id: 2,
-      name: "Sel aux Herbes de Provence",
-      prix: "12.99",
-      prixBarré: null,
-      category: "sel",
-      flavors: ["épicé"],
-      image: "../public/assets/img/sel.jpg",
-      imageHover: "../public/assets/img/sel-hover.jpg",
-      badges: ["BEST SELLER"],
-      description: "Sel artisanal aux herbes aromatiques"
-    },
-    {
-      id: 3,
-      name: "Sirop de Lavande",
-      prix: "15.50",
-      prixBarré: null,
-      category: "sirop",
-      flavors: ["doux", "fruité"],
-      image: "../public/assets/img/sirop.jpg",
-      imageHover: "../public/assets/img/sirop-hover.jpg",
-      badges: [],
-      description: "Sirop artisanal à la lavande"
-    },
-    {
-      id: 4,
-      name: "Gelée de Fleurs",
-      prix: "18.90",
-      prixBarré: "22.00",
-      category: "gelee",
-      flavors: ["acidulé", "doux"],
-      image: "../public/assets/img/gelee.jpg",
-      imageHover: "../public/assets/img/gelee-hover.jpg",
-      badges: ["NEW", "-15%"],
-      description: "Gelée délicate aux fleurs comestibles"
-    },
-    {
-      id: 5,
-      name: "Infusion Menthe Poivrée",
-      prix: "9.99",
-      prixBarré: null,
-      category: "infusion",
-      flavors: ["fruité"],
-      image: "../public/assets/img/tea2.jpg",
-      imageHover: "../public/assets/img/tea2-hover.jpg",
-      badges: [],
-      description: "Infusion rafraîchissante à la menthe"
-    },
-    {
-      id: 6,
-      name: "Sel Rose de l'Himalaya",
-      prix: "14.50",
-      prixBarré: null,
-      category: "sel",
-      flavors: ["doux"],
-      image: "../public/assets/img/sel2.jpg",
-      imageHover: "../public/assets/img/sel2-hover.jpg",
-      badges: ["BEST SELLER"],
-      description: "Sel rose naturellement riche en minéraux"
-    },
-    {
-      id: 7,
-      name: "Sirop de Rose",
-      prix: "16.90",
-      prixBarré: "19.90",
-      category: "sirop",
-      flavors: ["doux"],
-      image: "../public/assets/img/sirop2.jpg",
-      imageHover: "../public/assets/img/sirop2-hover.jpg",
-      badges: ["-15%"],
-      description: "Sirop délicat aux pétales de rose"
-    },
-    {
-      id: 8,
-      name: "Gelée d'Églantine",
-      prix: "17.50",
-      prixBarré: null,
-      category: "gelee",
-      flavors: ["fruité", "acidulé"],
-      image: "../public/assets/img/gelee2.jpg",
-      imageHover: "../public/assets/img/gelee2-hover.jpg",
-      badges: [],
-      description: "Gelée sauvage aux fruits d'églantine"
-    }
-  ];
+// ============================================
+// DONNÉES PRODUITS (Catalogue réel du site)
+// ============================================
 
-  const mainContainer = document.querySelector('main');
-
-  // Fonction pour obtenir l'icône de badge
-  function getBadgeClass(badge) {
-    if (badge === "NEW") return "new";
-    if (badge === "BEST SELLER") return "best-seller";
-    if (badge.includes("%")) return "discount";
-    return "";
-  }
-
-  // Fonction pour obtenir la couleur du dot selon la saveur
-  function getFlavorDotClass(flavor) {
-    const flavorColors = {
-      "fruité": "pink",
-      "acidulé": "orange",
-      "doux": "yellow",
-      "épicé": "green"
-    };
-    return flavorColors[flavor] || "pink";
-  }
-
-  // Fonction pour générer le HTML des badges
-  function generateBadgesHTML(badges) {
-    if (!badges || badges.length === 0) return '';
+const products = [
+    // INFUSIONS
+    {
+        id: 1,
+        name: "Souffle d'Ares",
+        category: "infusion",
+        price: 6.50,
+        image: "assets/img/infusion.jpg",
+        description: "Infusion tonique et revigorante aux notes boisées",
+        ingredients: "Romarin, Ortie, Fleur de sauge ananas",
+        availability: "Toute l'année",
+        badge: "Nouveau"
+    },
+    {
+        id: 2,
+        name: "Secret de Scylla",
+        category: "infusion",
+        price: 6.50,
+        image: "assets/img/infusion.jpg",
+        description: "Alliance rafraîchissante de thym et menthe",
+        ingredients: "Thym, Menthe",
+        availability: "Toute l'année"
+    },
+    {
+        id: 3,
+        name: "Harmonie de Freyja",
+        category: "infusion",
+        price: 6.50,
+        image: "assets/img/infusion.jpg",
+        description: "Mélange doux et apaisant aux feuilles nobles",
+        ingredients: "Feuilles d'olivier, Feuilles de figuier, Feuilles de framboisier",
+        availability: "Toute l'année"
+    },
+    {
+        id: 4,
+        name: "Voile d'Artémis",
+        category: "infusion",
+        price: 6.50,
+        image: "assets/img/infusion.jpg",
+        description: "Infusion florale délicate et parfumée",
+        ingredients: "Feuilles de mûrier, Thym, Rose",
+        availability: "Toute l'année"
+    },
+    {
+        id: 5,
+        name: "Etreinte de Nyx",
+        category: "infusion",
+        price: 6.50,
+        image: "assets/img/infusion.jpg",
+        description: "Tisane apaisante pour les moments de détente",
+        ingredients: "Camomille, Verveine, Lavande",
+        availability: "Toute l'année"
+    },
+    {
+        id: 6,
+        name: "Lunes d'Hécate",
+        category: "infusion",
+        price: 6.50,
+        image: "assets/img/infusion.jpg",
+        description: "Mélange floral et herbacé aux vertus apaisantes",
+        ingredients: "Achillée millefeuille, Angélique, Feuilles de framboisier, Bourrache",
+        availability: "Toute l'année"
+    },
+    {
+        id: 7,
+        name: "Eclat d'Ondine",
+        category: "infusion",
+        price: 6.50,
+        image: "assets/img/infusion.jpg",
+        description: "Infusion fraîche aux notes mentholées et florales",
+        ingredients: "Menthe chocolat, Sauge ananas, Bleuet, Mauve",
+        availability: "Toute l'année"
+    },
     
-    return `
-      <div class="badges">
-        ${badges.map(badge => `
-          <span class="badge ${getBadgeClass(badge)}">${badge}</span>
-        `).join('')}
-      </div>
-    `;
-  }
-
-  // Fonction pour générer le HTML du prix
-  function generatePriceHTML(prix, prixBarré) {
-    if (prixBarré) {
-      return `
-        <div class="price">
-          <span class="old-price">${prixBarré}€</span>
-          <span class="current-price">${prix}€</span>
-        </div>
-      `;
-    }
-    return `
-      <div class="price">
-        <span class="current-price">${prix}€</span>
-      </div>
-    `;
-  }
-
-  // Fonction pour générer le HTML des saveurs
-  function generateFlavorsHTML(flavors) {
-    if (!flavors || flavors.length === 0) return '';
+    // SELS
+    {
+        id: 8,
+        name: "Sel de Thym",
+        category: "sel",
+        price: 4.50,
+        image: "assets/img/sel.jpg",
+        description: "Sel aromatique aux notes de garrigue provençale",
+        ingredients: "Sel marin, Thym séché",
+        availability: "Toute l'année"
+    },
+    {
+        id: 9,
+        name: "Sel au Romarin",
+        category: "sel",
+        price: 4.50,
+        image: "assets/img/sel.jpg",
+        description: "Sel parfumé idéal pour viandes et légumes rôtis",
+        ingredients: "Sel marin, Romarin séché",
+        availability: "Toute l'année"
+    },
+    {
+        id: 10,
+        name: "Sel à la Sarriette",
+        category: "sel",
+        price: 4.50,
+        image: "assets/img/sel.jpg",
+        description: "Sel relevé aux saveurs méditerranéennes",
+        ingredients: "Sel marin, Sarriette séchée",
+        availability: "Toute l'année"
+    },
+    {
+        id: 11,
+        name: "Sel au Thym Citron",
+        category: "sel",
+        price: 4.50,
+        image: "assets/img/sel.jpg",
+        description: "Sel aux notes citronnées et herbacées",
+        ingredients: "Sel marin, Thym citron séché",
+        availability: "Automne - Hiver",
+        season: "Hiver"
+    },
     
-    return `
-      <div class="flavors">
-        ${flavors.map(flavor => `
-          <div class="flavor">
-            <span class="dot ${getFlavorDotClass(flavor)}"></span>
-            <span>${flavor.charAt(0).toUpperCase() + flavor.slice(1)}</span>
-          </div>
-        `).join('')}
-      </div>
-    `;
-  }
+    // SIROPS
+    {
+        id: 12,
+        name: "Sirop de Thym",
+        category: "sirop",
+        price: 5.50,
+        image: "assets/img/sirop.jpg",
+        description: "Sirop aromatique aux vertus apaisantes",
+        ingredients: "Infusion de thym, Sucre de canne, Citron",
+        availability: "Toute l'année"
+    },
+    {
+        id: 13,
+        name: "Sirop d'Hibiscus (Bisap)",
+        category: "sirop",
+        price: 5.50,
+        image: "assets/img/sirop.jpg",
+        description: "Sirop floral aux notes acidulées et rafraîchissantes",
+        ingredients: "Infusion d'hibiscus, Sucre de canne, Citron",
+        availability: "Toute l'année"
+    },
+    {
+        id: 14,
+        name: "Sirop de Feuilles de Mûrier",
+        category: "sirop",
+        price: 5.50,
+        image: "assets/img/sirop.jpg",
+        description: "Sirop doux aux notes végétales délicates",
+        ingredients: "Infusion de feuilles de mûrier, Sucre de canne, Citron",
+        availability: "Toute l'année"
+    },
+    {
+        id: 15,
+        name: "Sirop de Lavande",
+        category: "sirop",
+        price: 5.50,
+        image: "assets/img/sirop.jpg",
+        description: "Sirop floral et parfumé aux arômes provençaux",
+        ingredients: "Infusion de lavande, Sucre de canne, Citron",
+        availability: "Printemps - Été",
+        season: "Été"
+    },
+    
+    // GELÉES
+    {
+        id: 16,
+        name: "Gelée de Thym",
+        category: "gelee",
+        price: 4.50,
+        image: "assets/img/gelee.jpg",
+        description: "Gelée aromatique parfaite avec les fromages",
+        ingredients: "Infusion de thym, Sucre, Pectine",
+        availability: "Toute l'année"
+    },
+    {
+        id: 17,
+        name: "Gelée de Verveine",
+        category: "gelee",
+        price: 4.50,
+        image: "assets/img/gelee.jpg",
+        description: "Gelée délicate aux notes citronnées",
+        ingredients: "Infusion de verveine, Sucre, Pectine",
+        availability: "Toute l'année"
+    },
+    {
+        id: 18,
+        name: "Gelée de Coquelicot",
+        category: "gelee",
+        price: 4.50,
+        image: "assets/img/gelee.jpg",
+        description: "Gelée florale délicate et raffinée",
+        ingredients: "Infusion de coquelicot, Sucre, Pectine",
+        availability: "Printemps - Été",
+        season: "Été"
+    },
+    {
+        id: 19,
+        name: "Gelée de Rose",
+        category: "gelee",
+        price: 4.50,
+        image: "assets/img/gelee.jpg",
+        description: "Gelée élégante aux pétales de rose",
+        ingredients: "Infusion de rose, Sucre, Pectine",
+        availability: "Printemps - Été",
+        season: "Été"
+    }
+];
 
-  // Fonction pour générer le HTML d'une card produit
-function generateProductHTML(produit) {
-  const productUrl = `produit/${produit.name.toLowerCase().replace(/\s+/g, '-')}.html`;
-  
-  return `
-    <div class="card" data-category="${produit.category}" data-flavors="${produit.flavors.join(',')}">
-      ${generateBadgesHTML(produit.badges)}
-      <div class="image-container">
-        <img src="${produit.image}" alt="${produit.name}" class="main-image">
-        <img src="${produit.imageHover}" alt="${produit.name}" class="hover-image">
-        <a href="${productUrl}" class="quick-add">VOIR PLUS</a>
-      </div>
-      <div class="card-content">
-        <h2><a href="${productUrl}">${produit.name}</a></h2>
-        ${generatePriceHTML(produit.prix, produit.prixBarré)}
-        ${generateFlavorsHTML(produit.flavors)}
-      </div>
-    </div>
-  `;
+// ============================================
+// GESTION DU PANIER (LocalStorage)
+// ============================================
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartUI();
 }
 
-  // Remplir le container avec les produits
-  mainContainer.innerHTML = produits.map(generateProductHTML).join('');
-
-  // ============================================
-  // SYSTÈME DE FILTRES
-  // ============================================
-  
-  const categoryButtons = document.querySelectorAll('.category-filter');
-  const flavorButtons = document.querySelectorAll('.flavor-filter');
-  let cards = document.querySelectorAll('main .card');
-
-  let activeCategory = 'all';
-  let activeFlavor = 'all';
-
-  // Fonction pour filtrer les cards
-  function filterCards() {
-    cards = document.querySelectorAll('main .card'); // Re-sélectionner les cards après génération
+function addToCart(productId) {
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
     
-    cards.forEach(card => {
-      const cardCategory = card.getAttribute('data-category');
-      const cardFlavors = card.getAttribute('data-flavors');
-      
-      if (!cardCategory) return;
-      
-      const flavorsArray = cardFlavors ? cardFlavors.split(',').map(f => f.trim()) : [];
-      
-      const matchesCategory = activeCategory === 'all' || cardCategory === activeCategory;
-      const matchesFlavor = activeFlavor === 'all' || flavorsArray.includes(activeFlavor);
-      
-      if (matchesCategory && matchesFlavor) {
-        card.classList.remove('hidden');
-        card.style.animation = 'none';
-        setTimeout(() => {
-          card.style.animation = 'fadeIn 0.5s ease';
-        }, 10);
-      } else {
-        card.classList.add('hidden');
-      }
+    const existingItem = cart.find(item => item.id === productId);
+    
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            id: product.id,
+            name: product.name,
+            category: product.category,
+            price: product.price,
+            image: product.image,
+            quantity: 1
+        });
+    }
+    
+    saveCart();
+    showCartFeedback(product.name);
+}
+
+function removeFromCart(productId) {
+    cart = cart.filter(item => item.id !== productId);
+    saveCart();
+}
+
+function updateQuantity(productId, change) {
+    const item = cart.find(item => item.id === productId);
+    if (!item) return;
+    
+    item.quantity += change;
+    
+    if (item.quantity <= 0) {
+        removeFromCart(productId);
+    } else {
+        saveCart();
+    }
+}
+
+function getCartTotal() {
+    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+}
+
+function getCartCount() {
+    return cart.reduce((count, item) => count + item.quantity, 0);
+}
+
+function showCartFeedback(productName) {
+    // Petit feedback visuel quand on ajoute au panier
+    const cartIcon = document.getElementById('cartIcon');
+    cartIcon.style.transform = 'scale(1.2)';
+    setTimeout(() => {
+        cartIcon.style.transform = 'scale(1)';
+    }, 300);
+}
+
+// ============================================
+// MISE À JOUR DE L'UI DU PANIER
+// ============================================
+
+function updateCartUI() {
+    const cartCount = document.getElementById('cartCount');
+    const cartBody = document.getElementById('cartBody');
+    const cartFooter = document.getElementById('cartFooter');
+    const totalPrice = document.getElementById('totalPrice');
+    
+    const count = getCartCount();
+    const total = getCartTotal();
+    
+    // Mise à jour du compteur
+    cartCount.textContent = count;
+    cartCount.classList.toggle('hidden', count === 0);
+    
+    // Mise à jour du contenu du panier
+    if (cart.length === 0) {
+        cartBody.innerHTML = '<p class="cart-empty">Votre panier est vide</p>';
+        cartFooter.style.display = 'none';
+    } else {
+        cartBody.innerHTML = cart.map(item => `
+            <div class="cart-item">
+                <div class="cart-item-image">
+                    <img src="${item.image}" alt="${item.name}">
+                </div>
+                <div class="cart-item-info">
+                    <h4>${item.name}</h4>
+                    <span class="cart-item-category">${getCategoryLabel(item.category)}</span>
+                    <div class="cart-item-price">${item.price.toFixed(2)}€</div>
+                </div>
+                <div class="cart-item-actions">
+                    <button class="btn-remove" onclick="removeFromCart(${item.id})">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(${item.id}, -1)">−</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="updateQuantity(${item.id}, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+        
+        cartFooter.style.display = 'block';
+        totalPrice.textContent = total.toFixed(2) + '€';
+    }
+}
+
+function getCategoryLabel(category) {
+    const labels = {
+        'infusion': 'Infusion',
+        'sel': 'Sel',
+        'sirop': 'Sirop',
+        'gelee': 'Gelée'
+    };
+    return labels[category] || category;
+}
+
+// ============================================
+// AFFICHAGE DES PRODUITS
+// ============================================
+
+function renderProducts(filter = 'all') {
+    const productsGrid = document.getElementById('productsGrid');
+    
+    const filteredProducts = filter === 'all' 
+        ? products 
+        : products.filter(p => p.category === filter);
+    
+    productsGrid.innerHTML = filteredProducts.map(product => `
+        <div class="product-card" data-category="${product.category}">
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}">
+                ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
+                ${product.season ? `<span class="product-season">${product.season}</span>` : ''}
+            </div>
+            <div class="product-info">
+                <span class="product-category">${getCategoryLabel(product.category)}</span>
+                <h3>${product.name}</h3>
+                <p class="product-description">${product.description}</p>
+                <p class="product-ingredients">${product.ingredients}</p>
+                <div class="product-footer">
+                    <span class="product-price">${product.price.toFixed(2)}€</span>
+                    <button class="btn-add-cart" onclick="addToCart(${product.id})">
+                        <span>Ajouter</span>
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// ============================================
+// FILTRES
+// ============================================
+
+function initFilters() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Retirer active de tous les boutons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Ajouter active au bouton cliqué
+            btn.classList.add('active');
+            
+            const category = btn.getAttribute('data-category');
+            renderProducts(category);
+        });
     });
-  }
+}
 
-  // Filtre par catégorie
-  categoryButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      categoryButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      activeCategory = button.getAttribute('data-category');
-      filterCards();
+// ============================================
+// MODAL PANIER
+// ============================================
+
+function initCartModal() {
+    const cartIcon = document.getElementById('cartIcon');
+    const cartModal = document.getElementById('cartModal');
+    const cartClose = document.getElementById('cartClose');
+    const cartOverlay = document.getElementById('cartOverlay');
+    
+    cartIcon.addEventListener('click', (e) => {
+        e.preventDefault();
+        cartModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
     });
-  });
-
-  // Filtre par saveur
-  flavorButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      flavorButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      activeFlavor = button.getAttribute('data-flavor');
-      filterCards();
+    
+    cartClose.addEventListener('click', () => {
+        cartModal.classList.remove('active');
+        document.body.style.overflow = '';
     });
-  });
-
-  // ============================================
-  // MENU HAMBURGER
-  // ============================================
-  
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".categorie");
-
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-      document.body.classList.toggle('no-scroll');
+    
+    cartOverlay.addEventListener('click', () => {
+        cartModal.classList.remove('active');
+        document.body.style.overflow = '';
     });
+}
 
-    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navMenu.classList.remove("active");
-      document.body.classList.remove('no-scroll');
-    }));
-  }
+// ============================================
+// CHECKOUT (Préparation SumUp)
+// ============================================
+
+function initCheckout() {
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    
+    checkoutBtn.addEventListener('click', () => {
+        if (cart.length === 0) {
+            alert('Votre panier est vide');
+            return;
+        }
+        
+        // PRÉPARATION DES DONNÉES POUR SUMUP
+        const orderData = {
+            items: cart.map(item => ({
+                name: item.name,
+                quantity: item.quantity,
+                price: item.price,
+                total: item.price * item.quantity
+            })),
+            total: getCartTotal(),
+            timestamp: new Date().toISOString()
+        };
+        
+        console.log('Commande prête pour SumUp:', orderData);
+        
+        // TODO: Quand SumUp sera intégré, appeler l'API ici
+        // createSumUpCheckout(orderData);
+        
+        // Pour l'instant, on simule
+        alert(`Commande de ${orderData.total.toFixed(2)}€\n\nL'intégration SumUp sera ajoutée prochainement.\n\nVotre panier contient ${cart.length} produit(s).`);
+        
+        // Optionnel: Vider le panier après commande
+        // cart = [];
+        // saveCart();
+        // document.getElementById('cartModal').classList.remove('active');
+    });
+}
+
+// Cette fonction sera utilisée quand SumUp sera intégré
+function createSumUpCheckout(orderData) {
+    // FUTUR: Appel à l'API SumUp
+    /*
+    fetch('/api/create-sumup-checkout', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            amount: orderData.total,
+            currency: 'EUR',
+            checkout_reference: 'ORDER-' + Date.now(),
+            merchant_code: 'VOTRE_CODE_MARCHAND_SUMUP',
+            description: 'Commande Au Chaudron Fleuri',
+            line_items: orderData.items
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Rediriger vers la page de paiement SumUp
+        window.location.href = data.checkout_url;
+    })
+    .catch(error => {
+        console.error('Erreur SumUp:', error);
+        alert('Erreur lors de la création du paiement');
+    });
+    */
+}
+
+// ============================================
+// MENU HAMBURGER
+// ============================================
+
+function initHamburger() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.navbar-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        document.querySelectorAll('.navbar-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+}
+
+// ============================================
+// NEWSLETTER
+// ============================================
+
+function initNewsletter() {
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = newsletterForm.querySelector('input[type="email"]').value;
+            alert(`Merci ! Vous êtes inscrit avec : ${email}`);
+            newsletterForm.reset();
+        });
+    }
+}
+
+// ============================================
+// INITIALISATION
+// ============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderProducts();
+    initFilters();
+    initCartModal();
+    initCheckout();
+    initHamburger();
+    initNewsletter();
+    updateCartUI();
 });
