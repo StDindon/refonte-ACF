@@ -198,7 +198,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, rgba(156, 175, 136, 0.1) 0%, rgba(107, 142, 35, 0.05) 100%);
+  background: url(../img/banner-collection.jpg) center/cover no-repeat;
   
   .hero-content {
     max-width: 900px;
@@ -221,13 +221,13 @@ body {
       font-size: clamp(3rem, 10vw, 7rem);
       line-height: 1.1;
       margin-bottom: 30px;
-      color: $color-earth;
+      color: $color-cream; text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
     
     p {
       font-size: clamp(1.1rem, 2vw, 1.4rem);
       line-height: 1.7;
-      color: rgba(92, 64, 51, 0.7);
+      color: $color-cream; text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
   }
 }
