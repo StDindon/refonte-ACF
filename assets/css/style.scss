@@ -25,6 +25,38 @@ body {
   font-family: "Space Grotesk", sans-serif;
   overflow-x: hidden;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --font-heading: 'Allison', cursive;
+    --font-body: 'Poppins', sans-serif;
+    
+    --color-primary: #8BC34A;
+    --color-primary-dark: #5D8456;
+    --color-secondary: #FFD700;
+    --color-cream: #FAF8F3;
+}
+
+h1, h2, h3, .logo-text, .hero-title, .section-title, 
+.product-info h3, .cart-header h2, .footer h3, .footer h4, p, a{
+    font-family: var(--font-heading) !important;
+    font-weight: normal;
+}
+
+.logo-text {
+    font-size: 2rem;
+}
+
+.hero-collection h1 {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 1;
+}
+
+.product-info h3 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+}
 
 // Navbar
 .navbar {
@@ -1890,3 +1922,4 @@ body {
         &.slider-next { right: 0; }
     }
 }
+
