@@ -71,10 +71,10 @@ const craftSteps = document.querySelectorAll('.craft-step');
 const craftMainImage = document.getElementById('craftMainImage');
 
 const stepImages = {
-    '01': 'assets/img/about.png',
-    '02': 'assets/img/sel.jpg',
-    '03': 'assets/img/infusion.jpg',
-    '04': 'assets/img/sirop.jpg'
+    '01': 'assets/img/respect.jpg',
+    '02': 'assets/img/moment.jpg',
+    '03': 'assets/img/sechage.jpg',
+    '04': 'assets/img/transformation.jpg'
 };
 
 // Preload toutes les images
@@ -276,6 +276,81 @@ if ('IntersectionObserver' in window) {
     });
 }
 
+
+// ============================================
+// HERO PRODUCT SLIDER
+// ============================================
+
+function initHeroSlider() {
+    const slides = document.querySelectorAll('.product-slide');
+    const dots = document.querySelectorAll('.slider-dots .dot');
+    const prevBtn = document.querySelector('.slider-prev');
+    const nextBtn = document.querySelector('.slider-next');
+    
+    if (!slides.length) return;
+    
+    let current = 0;
+    let autoplayTimer = null;
+
+    function goTo(index) {
+        // Retirer active de la slide courante
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        
+        // Calculer le nouvel index (avec boucle)
+        current = (index + slides.length) % slides.length;
+        
+        // Activer la nouvelle slide
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
+    
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+    
+    function startAutoplay() {
+        autoplayTimer = setInterval(next, 4000);
+    }
+    
+    function resetAutoplay() {
+        clearInterval(autoplayTimer);
+        startAutoplay();
+    }
+
+    // Boutons flèches
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => { next(); resetAutoplay(); });
+    }
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => { prev(); resetAutoplay(); });
+    }
+    
+    // Dots
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => { goTo(i); resetAutoplay(); });
+    });
+    
+    // Swipe tactile
+    let touchStartX = 0;
+    const slider = document.querySelector('.product-slider');
+    if (slider) {
+        slider.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+        
+        slider.addEventListener('touchend', (e) => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) {
+                diff > 0 ? next() : prev();
+                resetAutoplay();
+            }
+        }, { passive: true });
+    }
+    
+    // Lancer l'autoplay
+    startAutoplay();
+}
+
 // Animation au chargement de la page
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
@@ -285,6 +360,7 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
     initCartModal();
+    initHeroSlider();
 });
 
 // Synchroniser entre les pages

@@ -26,7 +26,7 @@ body {
   overflow-x: hidden;
 }
 
-// Navbar top fixe
+// Navbar
 .navbar {
   position: fixed;
   top: 0;
@@ -35,13 +35,9 @@ body {
   z-index: 1000;
   padding: 20px 0;
   transition: all 0.4s ease;
-  
-  &.scrolled {
-    background: rgba(249, 246, 240, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-    padding: 15px 0;
-  }
+  background: rgba(249, 246, 240, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
   
   .navbar-content {
     max-width: 1600px;
@@ -108,13 +104,12 @@ body {
   .navbar-icons {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 15px;
     
     .cart-icon {
       position: relative;
       color: $color-bark;
       font-size: 1.5rem;
-      text-decoration: none;
       cursor: pointer;
       transition: all 0.3s;
       background: transparent;
@@ -315,8 +310,8 @@ body {
       
       .product-image {
         position: relative;
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 600px;
         z-index: 2;
         filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
         animation: gentleFloat 5s ease-in-out infinite;
@@ -1072,7 +1067,7 @@ body {
       color: white;
       padding: 18px 40px;
       border: none;
-      border-radius: 50px;
+      border-radius: 5px;
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
       font-size: 1.2rem;
@@ -1594,4 +1589,304 @@ body {
       }
     }
   }
+}
+/* PANIER MODERNE */
+
+.cart-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    color: #2C2C2C;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cart-icon:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.cart-count {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: #8BC34A;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-modal-content {
+    max-width: 420px;
+    box-shadow: -4px 0 24px rgba(0,0,0,0.15);
+}
+
+.cart-header {
+    padding: 1.5rem;
+    background: #FAFAFA;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.cart-header h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #2C2C2C;
+}
+
+.cart-close {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    color: #757575;
+}
+
+.cart-close:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.cart-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.cart-item-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cart-item-info h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cart-item-category {
+    font-size: 0.75rem;
+    color: #8BC34A;
+    text-transform: uppercase;
+}
+
+.quantity-controls {
+    display: flex;
+    gap: 0.5rem;
+    background: #F5F5F5;
+    border-radius: 20px;
+    padding: 0.25rem 0.5rem;
+}
+
+.quantity-controls button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: #5D8456;
+    cursor: pointer;
+}
+
+.quantity-controls button:hover {
+    background: #8BC34A;
+    color: white;
+}
+
+.btn-remove {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: #BDBDBD;
+}
+
+.btn-remove:hover {
+    background: #FFEBEE;
+    color: #E53935;
+}
+
+.cart-footer {
+    padding: 1.5rem;
+    background: #FAFAFA;
+    border-top: 1px solid #E0E0E0;
+}
+
+.total-price {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #5D8456;
+}
+
+.btn-checkout {
+    width: 100%;
+    padding: 1rem;
+    background: #8BC34A;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(139,195,74,0.3);
+}
+
+.btn-checkout:hover {
+    background: #7CB342;
+}
+
+// ============================================
+// HERO PRODUCT SLIDER
+// ============================================
+
+.hero-product {
+    position: relative;
+    width: 450px;
+    flex-shrink: 0;
+}
+
+.product-slider {
+    position: relative;
+    width: 100%;
+}
+
+.product-slide {
+    display: none;
+    animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    
+    &.active {
+        display: block;
+    }
+    
+    &.slide-out {
+        animation: slideOut 0.4s ease forwards;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+}
+
+// Dots navigation
+.slider-dots {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 50px; // espace pour le product-label qui dépasse
+    padding-top: 30px;
+    
+    .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(92, 64, 51, 0.2);
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.3s ease;
+        
+        &.active {
+            background: $color-moss;
+            width: 24px;
+            border-radius: 4px;
+        }
+        
+        &:hover:not(.active) {
+            background: rgba(92, 64, 51, 0.4);
+        }
+    }
+}
+
+// Flèches navigation
+.slider-arrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    color: $color-bark;
+    z-index: 10;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: $color-moss;
+        color: white;
+        transform: translateY(-50%) scale(1.05);
+        box-shadow: 0 6px 24px rgba(107, 142, 35, 0.3);
+    }
+    
+    &.slider-prev {
+        left: -20px;
+    }
+    
+    &.slider-next {
+        right: -20px;
+    }
+}
+
+// Responsive slider
+@media (max-width: 1024px) {
+    .hero-product {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .slider-arrow {
+        &.slider-prev { left: -10px; }
+        &.slider-next { right: -10px; }
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-dots {
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+    
+    .slider-arrow {
+        width: 36px;
+        height: 36px;
+        
+        &.slider-prev { left: 0; }
+        &.slider-next { right: 0; }
+    }
 }

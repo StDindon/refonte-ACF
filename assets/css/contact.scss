@@ -25,6 +25,7 @@ body {
   overflow-x: hidden;
 }
 
+
 // Navbar
 .navbar {
   position: fixed;
@@ -209,11 +210,11 @@ body {
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.2em;
-      color: $color-moss;
+      color: white;
       margin-bottom: 30px;
       padding: 10px 0;
-      border-top: 2px solid $color-moss;
-      border-bottom: 2px solid $color-moss;
+      border-top: 2px solid white;
+      border-bottom: 2px solid white;
     }
     
     h1 {
@@ -668,7 +669,7 @@ body {
       color: white;
       padding: 18px 40px;
       border: none;
-      border-radius: 50px;
+      border-radius: 5px;
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
       font-size: 1.2rem;

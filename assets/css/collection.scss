@@ -25,6 +25,7 @@ body {
   overflow-x: hidden;
 }
 
+
 // Navbar
 .navbar {
   position: fixed;
@@ -109,7 +110,6 @@ body {
       position: relative;
       color: $color-bark;
       font-size: 1.5rem;
-      text-decoration: none;
       cursor: pointer;
       transition: all 0.3s;
       background: transparent;
@@ -669,7 +669,7 @@ body {
       color: white;
       padding: 18px 40px;
       border: none;
-      border-radius: 50px;
+      border-radius: 5px;
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
       font-size: 1.2rem;

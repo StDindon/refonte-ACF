@@ -26,7 +26,7 @@
             
             <div class="navbar-icons">
                 <a href="#" class="cart-icon" id="cartIcon">
-                    <i class="fa-solid fa-basket-shopping"></i>
+                    <i class="fa-solid fa-bag-shopping"></i>
                     <span class="cart-count" id="cartCount">0</span>
                 </a>
                 <div class="navbar-social">
@@ -71,16 +71,68 @@
                 <p>Plantes aromatiques du Minervois</p>
             </div>
         </div>
-        
+
         <div class="hero-product">
-            <div class="product-visual">
-                <div class="organic-shape"></div>
-                <img src="assets/img/tea2.jpg" alt="Le Souffle D'Ares" class="product-image">
-                <div class="product-badge">Nouveau</div>
-                <div class="product-label">
-                    <h3>Souffle d'Ares</h3>
-                    <p>Romarin • Ortie • Fleur de sauge ananas</p>
+            <div class="product-slider">
+                
+                <!-- Slide 1 : Souffle d'Ares -->
+                <div class="product-slide active">
+                    <div class="product-visual">
+                        <div class="organic-shape"></div>
+                        <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.171), rgba(0, 0, 0, 0.192)), url(assets/img/tea2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;" alt="Le Souffle D'Ares" class="product-image"></div>
+                        <div class="product-badge">Nouveau</div>
+                        <div class="product-label">
+                            <h3>Souffle d'Ares</h3>
+                            <p>Romarin • Ortie • Fleur de sauge ananas</p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Slide 2 : Sirop exemple -->
+                <div class="product-slide">
+                    <div class="product-visual">
+                        <div class="organic-shape"></div>
+                        <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.171), rgba(0, 0, 0, 0.192)), url(assets/img/sirop2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;" alt="Le Souffle D'Ares" class="product-image"></div>
+                        <div class="product-badge">Coup de ❤</div>
+                        <div class="product-label">
+                            <h3>Sirop de Lavande</h3>
+                            <p>Lavande • Citron • Sucre de canne</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 : Sel exemple -->
+                <div class="product-slide">
+                    <div class="product-visual">
+                        <div class="organic-shape"></div>
+                        <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.171), rgba(0, 0, 0, 0.192)), url(assets/img/sel2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;" alt="Le Souffle D'Ares" class="product-image"></div>
+                        <div class="product-badge">Artisanal</div>
+                        <div class="product-label">
+                            <h3>Sel aux Herbes</h3>
+                            <p>Thym • Romarin • Sel marin non raffiné</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation dots -->
+                <div class="slider-dots">
+                    <button class="dot active" data-index="0"></button>
+                    <button class="dot" data-index="1"></button>
+                    <button class="dot" data-index="2"></button>
+                </div>
+
+                <!-- Flèches navigation -->
+                <button class="slider-arrow slider-prev" aria-label="Précédent">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <button class="slider-arrow slider-next" aria-label="Suivant">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+
             </div>
         </div>
         
@@ -95,7 +147,6 @@
         <div class="story-grid">
             <div class="story-image-1">
                 <img src="assets/img/producteur.jpg" alt="Sophie">
-                <div class="image-caption">Sophie Nadal-Sanchez</div>
             </div>
             
             <div class="story-text-1">
@@ -119,7 +170,7 @@
             </div>
             
             <div class="story-image-2">
-                <img src="assets/img/sel.jpg" alt="Ferme">
+                <img src="assets/img/IMG_4130.jpg" alt="Ferme">
             </div>
             
             <div class="story-text-2">
@@ -172,7 +223,7 @@
             
             <div class="product-card" data-category="sel">
                 <div class="product-card-image">
-                    <img src="assets/img/sel.jpg" alt="Sels">
+                    <img src="assets/img/sel2.jpg" alt="Sels">
                 </div>
                 <div class="product-card-overlay">
                     <span class="category-tag">SELS</span>
@@ -189,7 +240,7 @@
             
             <div class="product-card" data-category="gelee">
                 <div class="product-card-image">
-                    <img src="assets/img/sirop.jpg" alt="Gelées">
+                    <img src="assets/img/Gelée.jpg" alt="Gelées">
                 </div>
                 <div class="product-card-overlay">
                     <span class="category-tag">GELÉES</span>
@@ -258,7 +309,7 @@
         <div class="craft-right">
             <div class="craft-images">
                 <div class="craft-image-main">
-                    <img src="assets/img/about.png" alt="Artisanat" id="craftMainImage">
+                    <img src="assets/img/transformation.jpg" alt="Artisanat" id="craftMainImage">
                 </div>
             </div>
         </div>
@@ -269,7 +320,7 @@
         <div class="cart-modal-overlay" id="cartOverlay"></div>
         <div class="cart-modal-content">
             <div class="cart-header">
-                <h2><i class="fa-solid fa-basket-shopping"></i> Votre Panier</h2>
+                <h2><i class="fa-solid fa-bag-shopping"></i> Votre Panier</h2>
                 <button class="cart-close" id="cartClose">
                     <i class="fa-solid fa-xmark"></i>
                 </button>

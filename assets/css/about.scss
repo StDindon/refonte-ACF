@@ -251,13 +251,20 @@ body {
     grid-template-columns: 1fr 1.5fr;
     gap: 100px;
     align-items: start;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .sophie-image {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
     img {
-      width: 100%;
+      width: 400px;
       height: auto;
       border-radius: 8px;
     }
@@ -785,7 +792,7 @@ body {
       color: white;
       padding: 18px 40px;
       border: none;
-      border-radius: 50px;
+      border-radius: 5px;
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
       font-size: 1.2rem;
