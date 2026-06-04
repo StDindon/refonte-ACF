@@ -3,149 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/collection.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Nos Créations - Au Chaudron Fleuri</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #F9F6F0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .loader {
+            text-align: center;
+        }
+        .loader h1 {
+            font-family: 'Allison', cursive;
+            font-size: 3rem;
+            color: #5C4033;
+            margin-bottom: 1rem;
+        }
+        .loader p {
+            color: #8B7355;
+            font-size: 1.1rem;
+        }
+        .spinner {
+            border: 3px solid #E8E4D8;
+            border-top: 3px solid #6B8E23;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-
-
-    <!-- Navbar top -->
-    <nav class="navbar">
-        <div class="navbar-content">
-            <div class="navbar-logo">
-                <img src="assets/img/logo.png" alt="Au Chaudron Fleuri">
-                <span class="logo-text">Au Chaudron Fleuri</span>
-            </div>
-            
-            <ul class="navbar-menu">
-                <li><a href="index.html" >Accueil</a></li>
-                <li><a href="about.html">Notre Histoire</a></li>
-                <li><a href="collection.html" class="active">Créations</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            
-            <div class="navbar-icons">
-                <a href="#" class="cart-icon" id="cartIcon">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <span class="cart-count" id="cartCount">0</span>
-                </a>
-                <div class="navbar-social">
-                    <a href="https://www.instagram.com/auchaudronfleuri/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/p/Au-Chaudron-Fleuri-61568314588442/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                </div>
-                
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-            </div>
-            
-    </nav>
-
-    <!-- Hero Collection -->
-    <section class="hero-collection">
-        <div class="hero-content">
-            <span class="hero-label">Notre Collection</span>
-            <h1>Nos Créations<br>Artisanales</h1>
-            <p>Découvrez nos infusions, sels, sirops et gelées élaborés avec passion</p>
-        </div>
-    </section>
-
-    <!-- Filtres -->
-    <section class="filters-section">
-        <div class="filters-container">
-            <div class="filter-group">
-                <span class="filter-label">Catégorie :</span>
-                <button class="filter-btn active" data-category="all">Tout</button>
-                <button class="filter-btn" data-category="infusion">Infusions</button>
-                <button class="filter-btn" data-category="sel">Sels</button>
-                <button class="filter-btn" data-category="sirop">Sirops</button>
-                <button class="filter-btn" data-category="gelee">Gelées</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Produits -->
-    <section class="products-section">
-        <div class="products-grid" id="productsGrid">
-            <!-- Les produits seront générés dynamiquement par JS -->
-        </div>
-    </section>
-
-    <!-- Modal Panier -->
-    <div class="cart-modal" id="cartModal">
-        <div class="cart-modal-overlay" id="cartOverlay"></div>
-        <div class="cart-modal-content">
-            <div class="cart-header">
-                <h2><i class="fa-solid fa-bag-shopping"></i> Votre Panier</h2>
-                <button class="cart-close" id="cartClose">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            
-            <div class="cart-body" id="cartBody">
-                <p class="cart-empty">Votre panier est vide</p>
-            </div>
-            
-            <div class="cart-footer" id="cartFooter" style="display: none;">
-                <div class="cart-total">
-                    <span>Total</span>
-                    <span class="total-price" id="totalPrice">0.00€</span>
-                </div>
-                <button class="btn-checkout" id="checkoutBtn">
-                    <span>Commander</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-                <p class="checkout-info">Vous serez redirigé vers notre système de paiement sécurisé</p>
-            </div>
-        </div>
+    <div class="loader">
+        <h1>Au Chaudron Fleuri</h1>
+        <div class="spinner"></div>
+        <p>Redirection vers notre boutique...</p>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-main">
-            <div class="footer-info">
-                <h3>Au Chaudron Fleuri</h3>
-                <p>Productrice et Transformatrice de<br>Plantes Aromatiques et Médicinales</p>
-                <p>Agriculture BIO et locale</p>
-                <p><strong>Sophie Nadal-Sanchez</strong></p>
-            </div>
-            
-            <div class="footer-contact">
-                <h4>Contact</h4>
-                <p>RD 620 – Le Bernoye<br>11160 Villeneuve Minervois</p>
-                <p>06.95.69.69.45</p>
-                <p>Auchaudronfleuri.11@gmail.com</p>
-            </div>
-            
-            <div class="footer-links">
-                <a href="collection.html">Collection</a>
-                <a href="about.html">À Propos</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            
-            <div class="footer-newsletter">
-                <p>Restez informé·e</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Votre email" required>
-                    <button type="submit">→</button>
-                </form>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>© 2024 Au Chaudron Fleuri • SIRET : 518 622 469 00048</p>
-            <div class="footer-legal">
-                <a href="#">Mentions légales</a>
-                <a href="#">CGV</a>
-                <a href="#">Confidentialité</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/js/collection.js"></script>
+    
+    <script>
+        // Redirection automatique vers la boutique SumUp
+        window.location.href = 'https://auchaudronfleuri.sumupstore.com/produits';
+    </script>
 </body>
 </html>

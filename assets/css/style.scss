@@ -25,12 +25,13 @@ body {
   font-family: "Space Grotesk", sans-serif;
   overflow-x: hidden;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
 :root {
-    --font-heading: 'Allison', cursive;
-    --font-body: 'Poppins', sans-serif;
+    --font-heading: 'Dancing Script', cursive;
+    --font-body: 'Lora', serif;
     
     --color-primary: #8BC34A;
     --color-primary-dark: #5D8456;
@@ -38,24 +39,54 @@ body {
     --color-cream: #FAF8F3;
 }
 
-h1, h2, h3, .logo-text, .hero-title, .section-title, 
-.product-info h3, .cart-header h2, .footer h3, .footer h4, p, a{
+/* Titres → Allison */
+h1, h2, h3, h4,
+.logo-text, 
+.hero-title, 
+.section-title, 
+.product-info h3, 
+.cart-header h2, 
+.footer h3, 
+.footer h4 {
     font-family: var(--font-heading) !important;
     font-weight: normal;
 }
 
+/* Texte courant → Lora */
+p, a, button, span, div,
+.product-description,
+.product-category,
+.filter-btn,
+.btn-add-cart,
+.navbar-menu a,
+.footer p,
+input, textarea {
+    font-family: var(--font-body) !important;
+    font-weight: 400;
+}
+
 .logo-text {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
 .hero-collection h1 {
     font-size: clamp(3.5rem, 7vw, 6rem);
-    line-height: 1;
+    line-height: 1.1;
 }
 
 .product-info h3 {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 3vw, 2.5rem);
     line-height: 1.2;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.product-description {
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 // Navbar
@@ -280,7 +311,7 @@ h1, h2, h3, .logo-text, .hero-title, .section-title,
         
         .word {
           display: inline-block;
-          font-family: 'Playfair Display', serif;
+          font-family: 'Dancing Script', cursive;
           font-size: clamp(4rem, 11vw, 10rem);
           font-weight: 800;
           line-height: 0.95;
@@ -310,6 +341,9 @@ h1, h2, h3, .logo-text, .hero-title, .section-title,
   }
   
   .hero-subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     p {
       font-size: 1.3rem;
       font-weight: 500;
@@ -317,6 +351,29 @@ h1, h2, h3, .logo-text, .hero-title, .section-title,
       animation: fadeIn 1s ease forwards;
       animation-delay: 1.2s;
       opacity: 0;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      gap: 10px;
+      color: $color-moss;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      border-bottom: 2px solid $color-moss;
+      padding-bottom: 2px;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 1.5s;
+      opacity: 0;
+      
+      svg {
+        transition: transform 0.3s;
+      }
+      
+      &:hover svg {
+        transform: translateX(7px);
+      }
     }
   }
   
@@ -384,6 +441,19 @@ h1, h2, h3, .logo-text, .hero-title, .section-title,
         p {
           font-size: 0.95rem;
           color: rgba(92, 64, 51, 0.6);
+        }
+
+        a{
+          text-decoration: none;
+          color: white;
+          background: $color-moss;
+          padding: 8px 18px;
+          border-radius: 50px;
+          font-size: 0.85rem;
+          font-weight: 600;
+          display: inline-block;
+          margin-top: 15px;
+            transition: all 0.3s;
         }
       }
     }
@@ -522,6 +592,47 @@ h1, h2, h3, .logo-text, .hero-title, .section-title,
         color: rgba(92, 64, 51, 0.8);
         max-width: 650px;
       }
+
+      
+      .social{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .reseau{
+          display: flex;
+          gap: 15px;
+          
+          a {
+            color: rgba(92, 64, 51, 0.6);
+            font-size: 1.4rem;
+            transition: all 0.3s;
+            
+            &:hover {
+              color: $color-moss;
+            }
+          }
+        }
+
+         .btn-outline{
+          margin-top: 20px;
+          text-decoration: none;
+          width: fit-content;
+          color: white;
+          background: $color-moss;
+          padding: 8px 18px;
+          border-radius: 5px;
+          font-size: 0.85rem;
+          font-weight: 600;
+          display: inline-block;
+          transition: all 0.3s;
+
+          &:hover {
+            background: $color-earth;
+            color: white;
+          }
+        }
+      }
     }
     
     .story-stats {
@@ -634,8 +745,6 @@ h1, h2, h3, .logo-text, .hero-title, .section-title,
     cursor: pointer;
     
     &.featured {
-      grid-column: span 2;
-      grid-row: span 2;
       
       .featured-badge {
         position: absolute;
@@ -643,9 +752,9 @@ h1, h2, h3, .logo-text, .hero-title, .section-title,
         right: 25px;
         background: white;
         color: $color-bark;
-        padding: 10px 25px;
+        padding: 8px 20px;
         border-radius: 50px;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         font-weight: 600;
         z-index: 3;
       }

@@ -1,6 +1,9 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -19,32 +22,62 @@ body {
 }
 
 :root {
-  --font-heading: 'Allison', cursive;
-  --font-body: 'Poppins', sans-serif;
+  --font-heading: 'Dancing Script', cursive;
+  --font-body: 'Lora', serif;
   --color-primary: #8BC34A;
   --color-primary-dark: #5D8456;
   --color-secondary: #FFD700;
   --color-cream: #FAF8F3;
 }
 
-h1, h2, h3, .logo-text, .hero-title, .section-title,
-.product-info h3, .cart-header h2, .footer h3, .footer h4, p, a {
+/* Titres → Allison */
+h1, h2, h3, h4,
+.logo-text,
+.hero-title,
+.section-title,
+.product-info h3,
+.cart-header h2,
+.footer h3,
+.footer h4 {
   font-family: var(--font-heading) !important;
   font-weight: normal;
 }
 
+/* Texte courant → Lora */
+p, a, button, span, div,
+.product-description,
+.product-category,
+.filter-btn,
+.btn-add-cart,
+.navbar-menu a,
+.footer p,
+input, textarea {
+  font-family: var(--font-body) !important;
+  font-weight: 400;
+}
+
 .logo-text {
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
 .hero-collection h1 {
   font-size: clamp(3.5rem, 7vw, 6rem);
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .product-info h3 {
-  font-size: 2.2rem;
+  font-size: clamp(2rem, 3vw, 2.5rem);
   line-height: 1.2;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.product-description {
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .navbar {
@@ -235,7 +268,7 @@ h1, h2, h3, .logo-text, .hero-title, .section-title,
 }
 .hero .hero-title h1 .title-line .word {
   display: inline-block;
-  font-family: "Playfair Display", serif;
+  font-family: "Dancing Script", cursive;
   font-size: clamp(4rem, 11vw, 10rem);
   font-weight: 800;
   line-height: 0.95;
@@ -256,6 +289,11 @@ h1, h2, h3, .logo-text, .hero-title, .section-title,
   font-style: italic;
   animation-delay: 0.7s;
 }
+.hero .hero-subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .hero .hero-subtitle p {
   font-size: 1.3rem;
   font-weight: 500;
@@ -263,6 +301,28 @@ h1, h2, h3, .logo-text, .hero-title, .section-title,
   animation: fadeIn 1s ease forwards;
   animation-delay: 1.2s;
   opacity: 0;
+}
+.hero .hero-subtitle .hero-cta {
+  display: inline-flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 10px;
+  color: #6B8E23;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-bottom: 2px solid #6B8E23;
+  padding-bottom: 2px;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+.hero .hero-subtitle .hero-cta svg {
+  transition: transform 0.3s;
+}
+.hero .hero-subtitle .hero-cta:hover svg {
+  transform: translateX(7px);
 }
 .hero .hero-product {
   position: relative;
@@ -324,6 +384,18 @@ h1, h2, h3, .logo-text, .hero-title, .section-title,
 .hero .hero-product .product-visual .product-label p {
   font-size: 0.95rem;
   color: rgba(92, 64, 51, 0.6);
+}
+.hero .hero-product .product-visual .product-label a {
+  text-decoration: none;
+  color: white;
+  background: #6B8E23;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 15px;
+  transition: all 0.3s;
 }
 .hero .hero-scroll {
   position: absolute;
@@ -446,6 +518,41 @@ h1, h2, h3, .logo-text, .hero-title, .section-title,
   color: rgba(92, 64, 51, 0.8);
   max-width: 650px;
 }
+.story .story-grid .story-text-1 .social {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.story .story-grid .story-text-1 .social .reseau {
+  display: flex;
+  gap: 15px;
+}
+.story .story-grid .story-text-1 .social .reseau a {
+  color: rgba(92, 64, 51, 0.6);
+  font-size: 1.4rem;
+  transition: all 0.3s;
+}
+.story .story-grid .story-text-1 .social .reseau a:hover {
+  color: #6B8E23;
+}
+.story .story-grid .story-text-1 .social .btn-outline {
+  margin-top: 20px;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  background: #6B8E23;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.story .story-grid .story-text-1 .social .btn-outline:hover {
+  background: #8B7355;
+  color: white;
+}
 .story .story-grid .story-stats {
   grid-column: 2;
   grid-row: 2;
@@ -541,19 +648,15 @@ h1, h2, h3, .logo-text, .hero-title, .section-title,
   border-radius: 8px;
   cursor: pointer;
 }
-.products .product-card.featured {
-  grid-column: span 2;
-  grid-row: span 2;
-}
 .products .product-card.featured .featured-badge {
   position: absolute;
   top: 25px;
   right: 25px;
   background: white;
   color: #5C4033;
-  padding: 10px 25px;
+  padding: 8px 20px;
   border-radius: 50px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   z-index: 3;
 }

@@ -24,12 +24,13 @@ body {
   font-family: "Space Grotesk", sans-serif;
   overflow-x: hidden;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
 :root {
-    --font-heading: 'Allison', cursive;
-    --font-body: 'Poppins', sans-serif;
+    --font-heading: 'Dancing Script', cursive;
+    --font-body: 'Lora', serif;
     
     --color-primary: #8BC34A;
     --color-primary-dark: #5D8456;
@@ -37,27 +38,55 @@ body {
     --color-cream: #FAF8F3;
 }
 
-h1, h2, h3, .logo-text, .hero-title, .section-title, 
-.product-info h3, .cart-header h2, .footer h3, .footer h4, p, a{
+/* Titres → Allison */
+h1, h2, h3, h4,
+.logo-text, 
+.hero-title, 
+.section-title, 
+.product-info h3, 
+.cart-header h2, 
+.footer h3, 
+.footer h4 {
     font-family: var(--font-heading) !important;
     font-weight: normal;
 }
 
+/* Texte courant → Lora */
+p, a, button, span, div,
+.product-description,
+.product-category,
+.filter-btn,
+.btn-add-cart,
+.navbar-menu a,
+.footer p,
+input, textarea {
+    font-family: var(--font-body) !important;
+    font-weight: 400;
+}
+
 .logo-text {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
 .hero-collection h1 {
     font-size: clamp(3.5rem, 7vw, 6rem);
-    line-height: 1;
+    line-height: 1.1;
 }
 
 .product-info h3 {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 3vw, 2.5rem);
     line-height: 1.2;
 }
 
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
 
+.product-description {
+    font-size: 1rem;
+    line-height: 1.7;
+}
 
 // Navbar
 .navbar {
